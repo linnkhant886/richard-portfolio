@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import SocialLink from "../SocialLink";
 const sideBarItems = [
   { title: "Introduction", id: "intro" },
   { title: "Skills", id: "skills" },
@@ -36,6 +37,10 @@ export default function Sidebar() {
           ))}
         </nav>
       </motion.div>
+
+      <div>
+        <SocialLink />
+      </div>
     </div>
   );
 }

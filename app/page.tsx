@@ -6,15 +6,15 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Play } from "lucide-react";
 import SocialLink from "./component/SocialLink";
+import BackgroundElement from "./component/BackgroundElement";
 
 export default function PortfolioPage() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-mquYWelJgmVI5T3fa3SDouT9nvcTYk.png')] opacity-20" />
-
+      {/* <BackgroundElement /> */}
       {/* Main Content */}
-      <main className="relative z-10 container mx-auto px-6 py-20">
+      <div className="relative z-10 container mx-auto px-6 py-20">
         <div className="max-w-3xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export default function PortfolioPage() {
           {/* Social Links */}
           <SocialLink />
         </div>
-      </main>
+      </div>
 
       {/* Animated Corner Numbers */}
       <div className="absolute bottom-6 right-6 text-8xl font-bold text-white/10">
