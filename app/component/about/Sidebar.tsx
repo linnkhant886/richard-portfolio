@@ -1,44 +1,53 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
 import SocialLink from "../SocialLink";
 const sideBarItems = [
   { title: "Introduction", id: "intro" },
   { title: "Skills", id: "skills" },
   { title: "Education", id: "education" },
 ];
-export default function Sidebar() {
-  const [activeSection, setActiveSection] = useState("intro");
+interface SidebarProps {
+  activeSection: string;
+  scrollToSection: (id: string) => void;
+  setActiveSection: (id: string) => void;
+}
 
+export default function Sidebar({
+  activeSection,
+  scrollToSection,
+  setActiveSection,
+}: SidebarProps) {
   return (
     <div>
       <motion.div
         initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        className="w-64 fixed h-screen bg-zinc-900/50 backdrop-blur-xl border-r border-white/10 p-6"
+        animate={{ x: 0, opacity: 0.9 }}
+        className="w-[25%] fixed  h-screen bg-transparent backdrop-blur-xl   p-6"
       >
-        <h2 className="text-2xl font-bold mb-2">ABOUT ME</h2>
-        <p className="text-sm text-gray-400 mb-8">My Profile At A Glance</p>
+        <h2 className="text-2xl text-center font-bold mb-2">ABOUT ME</h2>
+        <p className="text-sm text-center text-gray-400 mb-8">
+          My Profile At A Glance
+        </p>
 
-        <nav className="space-y-2">
+        <div className="space-y-2 flex  flex-col ">
           {sideBarItems.map((item) => (
             <button
               key={item.id}
-              onClick={() => setActiveSection(item.id)}
-              className={`w-full text-left px-4 py-2 rounded-lg transition-colors ${
-                activeSection === item.id
-                  ? "bg-white/10 text-white"
-                  : "text-gray-400 hover:bg-white/5"
-              }`}
+              onClick={() => {
+                setActiveSection(item.id);
+                scrollToSection(item.id);
+              }}
+              className={` px-4 py-2 rounded-lg transition-colors `}
             >
+              {activeSection === item.id && <span className="mr-2">✓</span>}
               {item.title}
             </button>
           ))}
-        </nav>
+        </div>
       </motion.div>
 
-      <div>
+      <div className="fixed bottom-0 left-10  p-6">
         <SocialLink />
       </div>
     </div>

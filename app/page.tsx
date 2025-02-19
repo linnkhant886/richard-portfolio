@@ -10,9 +10,8 @@ import BackgroundElement from "./component/BackgroundElement";
 
 export default function PortfolioPage() {
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      {/* <BackgroundElement /> */}
+    <div className=" bg-black text-white relative overflow-hidden">
+      <BackgroundElement />
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-6 py-20">
         <div className="max-w-3xl mx-auto text-center">
@@ -77,16 +76,7 @@ export default function PortfolioPage() {
         </div>
       </div>
 
-      {/* Animated Corner Numbers */}
-      <div className="absolute bottom-6 right-6 text-8xl font-bold text-white/10">
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.8 }}
-        >
-          01
-        </motion.div>
-      </div>
+      
     </div>
   );
 }

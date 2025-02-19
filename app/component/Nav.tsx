@@ -13,7 +13,7 @@ export default function Nav() {
       ];
 
     return (
-        <nav className="relative z-10 flex justify-between items-center p-6">
+        <nav className=" sticky top-0 z-10 flex justify-between items-center p-6">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}

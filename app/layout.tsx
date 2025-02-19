@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${titilliumWeb.variable} antialiased`}
       >
-        <Nav />
+          <Nav />
         {children}
       </body>
     </html>

@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import React from 'react';
+import React from "react";
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { SendHorizontal, Sparkles } from 'lucide-react';
-import BackgroundElement from '../component/BackgroundElement';
+import { SendHorizontal, Sparkles } from "lucide-react";
+import BackgroundElement from "../component/BackgroundElement";
+import SocialLink from "../component/SocialLink";
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -17,39 +17,36 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     setIsSubmitting(false);
   };
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden px-4">
-      {/* <BackgroundElement /> */}
+      <BackgroundElement />
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto py-20 relative">
+      <div className="max-w-4xl mx-auto py-10 relative">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          className="text-center mb-12 space-y-4"
+          className="text-center mb-8 space-y-4"
         >
-          <Badge variant="outline" className="mb-4">
-            Get In Touch
-          </Badge>
           <h1 className="text-5xl font-bold bg-gradient-to-r from-white to-gray-500 bg-clip-text text-transparent">
             CONTACT
           </h1>
-          <p className="text-gray-400">
-            Reach Out And Collaborate With Me
-          </p>
+          <p className="text-gray-400">Reach Out And Collaborate With Me</p>
         </motion.div>
+
+        <SocialLink />
 
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-          <Card className="bg-zinc-900/50 border-white/10 backdrop-blur-xl p-8">
+          <Card className="bg-zinc-900/50 mx-auto mt-6 border-white/10 backdrop-blur-xl max-w-[600px] p-8">
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <motion.div
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}

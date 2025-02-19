@@ -30,6 +30,7 @@ export default function Skills() {
         animate={{ y: 0, opacity: 1 }}
         className="space-y-8 relative  "
       >
+
       <div className="absolute dot-circle "></div>
  
         <h1 className="mb-4 text-3xl pl-10 ">Skills</h1>
