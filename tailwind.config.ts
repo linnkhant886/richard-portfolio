@@ -56,11 +56,20 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      keyframes: {
+        "border-spin": {
+          "100%": {
+            transform: "rotate(-360deg)",
+          },
+        },
+      },
+      animation: {
+        "border-spin": "border-spin 7s linear infinite",
+      },
     },
     fontFamily: {
       primary: ["var(--font-open-sans)", "sans-serif"],
       secondary: ["var(--font-titillium-web)", "sans-serif"],
     },
   },
-  plugins: [require("tailwindcss-animate")],
 } satisfies Config;

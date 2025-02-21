@@ -28,7 +28,7 @@ export default function IntroSection() {
       >
         <div className="absolute inset-0 w-0.5  bg-white/20"></div>
 
-        <div className=" flex  gap-10 ">
+        <div className=" flex flex-col md:flex-row gap-10 items-center md:items-start ">
           <Card className="bg-zinc-900/50 border-white/10 p-4 space-y-4">
             <Image
               src={"/profile.jpg"}
@@ -37,7 +37,7 @@ export default function IntroSection() {
               height={400}
             />
           </Card>
-          <div className="space-y-4">
+          <div className="space-y-4 text-center md:text-left">
             <h1 className="text-4xl font-bold">⚡Yonatan Richard</h1>
             <p className="text-xl text-gray-400">Full-Stack Developer</p>
             <p className="text-gray-400 leading-relaxed">
@@ -50,7 +50,7 @@ export default function IntroSection() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="flex gap-4"
+              className="flex gap-4 justify-center md:justify-start"
             >
               <div className="flex items-center gap-2">
                 <GitBranch className="text-blue-500" />

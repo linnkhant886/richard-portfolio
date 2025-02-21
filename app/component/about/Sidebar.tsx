@@ -19,7 +19,7 @@ export default function Sidebar({
   setActiveSection,
 }: SidebarProps) {
   return (
-    <div>
+    <div className="hidden md:flex ">
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 0.9 }}

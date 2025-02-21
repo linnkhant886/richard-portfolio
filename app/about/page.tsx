@@ -25,7 +25,7 @@ export default function AboutPage() {
       />
 
       {/* Scrollable Content */}
-      <div className="ml-[15%] w-[65%] flex-1 p-8">
+      <div className="  md:ml-[15%] w-[65%] flex-1 p-8">
         <div className="max-w-4xl mx-auto space-y-20">
           {/* Introduction Section */}
           <div ref={introRef} id="intro">

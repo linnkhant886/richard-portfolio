@@ -22,7 +22,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden px-4">
+    <div className=" bg-black text-white relative overflow-hidden px-4">
       <BackgroundElement />
       {/* Main Content */}
       <div className="max-w-4xl mx-auto py-10 relative">

@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ChevronDown } from "lucide-react";
 import BackgroundElement from "../component/BackgroundElement";
+import Image from "next/image";
 
 interface Project {
   id: number;
@@ -26,7 +27,7 @@ const projects: Project[] = [
     description:
       "A pixel-perfect clone of the AppleTV interface with responsive design and modern UI elements.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dwPEMYJCsebIDtQWT5k2LlkdjduGUn.png",
+      "/posDashboard.jfif",
     features: ["AppleTV UI clone", "Display My UI skills", "Responsive Design"],
     techStack: ["Frontend", "JavaScript", "React"],
     sourceUrl: "#",
@@ -38,7 +39,7 @@ const projects: Project[] = [
     description:
       "A modern URL shortening service with custom analytics and user management.",
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-dwPEMYJCsebIDtQWT5k2LlkdjduGUn.png",
+      "/posDashboard.jfif",
     features: ["URL Management", "Analytics Dashboard", "User Authentication"],
     techStack: ["Next.js", "TypeScript", "MongoDB"],
     sourceUrl: "#",
@@ -97,10 +98,10 @@ export default function ProjectsPage() {
 
                 {/* Project Image */}
                 <div className="relative aspect-video overflow-hidden">
-                  <img
-                    src={project.image || "/placeholder.svg"}
+                  <Image
+                    src={project.image }
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    fill
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </div>

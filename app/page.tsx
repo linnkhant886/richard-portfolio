@@ -4,9 +4,10 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 
 import { Badge } from "@/components/ui/badge";
-import { Play } from "lucide-react";
+import { ArrowRight, Download, FileText } from "lucide-react";
 import SocialLink from "./component/SocialLink";
 import BackgroundElement from "./component/BackgroundElement";
+import Link from "next/link";
 
 export default function PortfolioPage() {
   return (
@@ -20,7 +21,7 @@ export default function PortfolioPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Badge variant="outline" className="mb-4">
+            <Badge variant="outline" className="mb-4 ">
               Welcome to my portfolio
             </Badge>
           </motion.div>
@@ -38,7 +39,7 @@ export default function PortfolioPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-xl md:text-2xl text-gray-400 mb-8"
+            className="text-xl md:text-2xl  mb-8"
           >
             Full Stack Developer
           </motion.h2>
@@ -56,27 +57,65 @@ export default function PortfolioPage() {
             continuously improving my skills.
           </motion.p>
 
-          {/* Interactive Play Button */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.6 }}
-            className="mb-12"
-          >
-            <Button
-              size="lg"
-              className="rounded-full p-8 hover:scale-110 transition-transform"
+          {/* resume Play Button */}
+          <div className=" flex flex-col md:flex-row  gap-6 items-center mb-10 justify-center ">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="relative"
             >
-              <Play className="h-8 w-8" />
-            </Button>
-          </motion.div>
+              <Button
+                size="lg"
+                variant="outline"
+                className="group relative overflow-hidden border-white/20 hover:border-white/40"
+                onClick={() => window.open("/your-resume.pdf", "_blank")}
+              >
+                <span className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 group-hover:opacity-100 opacity-0 transition-opacity" />
+                <FileText className="mr-2 h-5 w-5 group-hover:animate-bounce" />
+                Download Resume
+                <Download className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+              </Button>
+              <motion.div
+                className="absolute inset-0 -z-10"
+                animate={{
+                  boxShadow: [
+                    "0 0 20px 2px rgba(59, 130, 246, 0.2)",
+                    "0 0 30px 4px rgba(59, 130, 246, 0.1)",
+                    "0 0 20px 2px rgba(59, 130, 246, 0.2)",
+                  ],
+                }}
+                transition={{ duration: 2, repeat: Infinity }}
+              />
+            </motion.div>
+
+            {/* View Profile Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className=""
+            >
+              <Link href="/about" className="inline-block group">
+                <div className="flex flex-col items-center gap-2 text-gray-400 hover:text-white transition-colors">
+                  <motion.div
+                    className="flex items-center gap-2 text-xl font-medium"
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                  >
+                    View My Profile <ArrowRight className="h-4 w-4" />
+                  </motion.div>
+                </div>
+              </Link>
+            </motion.div>
+          </div>
 
           {/* Social Links */}
           <SocialLink />
         </div>
       </div>
-
-      
     </div>
   );
 }
