@@ -79,7 +79,7 @@ const projects: Project[] = [
     title: "Job Finding App",
     description:
       "A full-stack job-finding application allowing users to create, read, update, and delete job postings while browsing available opportunities.",
-    image: "/jobstar.jpg",
+    image: "/jobfinder.jpg",
     features: [
       "Job CRUD Operations",
       "Job Search & Filtering",
@@ -144,9 +144,7 @@ export default function ProjectsPage() {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    layout="responsive"
-                    width={600} // Base width for aspect ratio
-                    height={337} // Base height for aspect ratio (adjusted for ~16:9)
+                    fill
                     className="object-cover w-full h-full"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
