@@ -1,17 +1,22 @@
 "use client";
 
 import React from "react";
-
-import Sidebar from "../component/about/Sidebar";
-import IntroSection from "../component/about/IntroSection";
-import Skills from "../component/about/Skills";
-import Education from "../component/about/Education";
-import BackgroundElement from "../component/BackgroundElement";
 import { useScrollSections } from "../hooks/useScrollSection";
+import BackgroundElement from "@/components/BackgroundElement";
+import IntroSection from "@/components/abouts/IntroSection";
+import Skills from "@/components/abouts/Skills";
+import Education from "@/components/abouts/Education";
+import Sidebar from "@/components/abouts/Sidebar";
 
 export default function AboutPage() {
-  const { activeSection, introRef, skillsRef, educationRef, scrollToSection ,setActiveSection } =
-    useScrollSections();
+  const {
+    activeSection,
+    introRef,
+    skillsRef,
+    educationRef,
+    scrollToSection,
+    setActiveSection,
+  } = useScrollSections();
   return (
     <div className="flex relative min-h-screen bg-black text-white">
       {/* Fixed Sidebar */}

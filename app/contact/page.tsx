@@ -7,8 +7,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { SendHorizontal, Sparkles } from "lucide-react";
-import BackgroundElement from "../component/BackgroundElement";
-import SocialLink from "../component/SocialLink";
+import BackgroundElement from "@/components/BackgroundElement";
+import SocialLink from "@/components/SocialLink";
+
 
 export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = React.useState(false);

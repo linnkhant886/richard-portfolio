@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { Open_Sans, Titillium_Web } from "next/font/google";
-import Nav from "./component/Nav";
+import Nav from "@/components/Nav";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -31,7 +31,7 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${titilliumWeb.variable} antialiased`}
       >
-          <Nav />
+        <Nav />
         {children}
       </body>
     </html>

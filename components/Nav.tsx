@@ -15,7 +15,7 @@ export default function Nav() {
   ];
 
   return (
-    <nav className="sticky top-0 z-10 flex justify-between items-center p-6 bg-black text-white">
+    <nav className="sticky top-0 z-50 flex justify-between items-center p-6 bg-black text-white">
       {/* Logo */}
       <motion.div
         initial={{ opacity: 0, x: -20 }}
@@ -50,19 +50,24 @@ export default function Nav() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-16 right-6 bg-black border border-white/20 rounded-lg shadow-lg p-4 md:hidden">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          className="absolute top-16 right-6 bg-black border border-white/20 rounded-lg shadow-lg p-4 md:hidden"
+        >
           {navItems.map((item) => (
             <Link key={item.name} href={item.path} passHref>
               <Button
                 variant="ghost"
-                className={`block w-full text-left text-white hover:text-primary hover:bg-white/10 `}
+                className="block w-full text-left text-white hover:text-primary hover:bg-white/10"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </Button>
             </Link>
           ))}
-        </div>
+        </motion.div>
       )}
     </nav>
   );

@@ -6,8 +6,8 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github, ChevronDown } from "lucide-react";
-import BackgroundElement from "../component/BackgroundElement";
 import Image from "next/image";
+import BackgroundElement from "@/components/BackgroundElement";
 
 interface Project {
   id: number;
@@ -23,29 +23,72 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "AppleTV Home Page",
+    title: "Restaurant POS system",
     description:
-      "A pixel-perfect clone of the AppleTV interface with responsive design and modern UI elements.",
-    image:
-      "/posDashboard.jfif",
-    features: ["AppleTV UI clone", "Display My UI skills", "Responsive Design"],
-    techStack: ["Frontend", "JavaScript", "React"],
-    sourceUrl: "#",
-    liveUrl: "#",
+      "Built a full-stack POS system with Next.js, including a back-office dashboard for restaurant management and a customer-facing QR code ordering feature.",
+    image: "/pos.jpg",
+    features: [
+      "Back-Office Dashboard",
+      "QR Code Ordering",
+      "Secure Authentication",
+    ],
+    techStack: [
+      " Next.js (Full-Stack)",
+      " NextAuth ",
+      "PostgreSQL",
+      " Material-UI ",
+      "Prisma",
+    ],
+    sourceUrl: "https://github.com/linnkhant886/restaurant-pos",
+    liveUrl: "https://restaurant-pos-lac.vercel.app/",
   },
   {
     id: 2,
-    title: "URL Shortener",
+    title: "Home Rental System",
     description:
-      "A modern URL shortening service with custom analytics and user management.",
-    image:
-      "/posDashboard.jfif",
-    features: ["URL Management", "Analytics Dashboard", "User Authentication"],
-    techStack: ["Next.js", "TypeScript", "MongoDB"],
-    sourceUrl: "#",
+      "A full-stack home rental platform for listing properties, managing bookings, and processing payments securely.",
+    image: "/homeRental.jpg",
+    features: [
+      "Property Listing & Management",
+      "Booking Reservations & Favoriting",
+      "Secure Payments & Income Tracking",
+    ],
+    techStack: [
+      "Next.js",
+      "Clerk Auth",
+      "Tailwind CSS & shadcn",
+      "Supabase",
+      "Stripe API",
+    ],
+    sourceUrl: "https://github.com/linnkhant886/home-rental-pj",
     liveUrl: "#",
   },
-  // Add more projects as needed
+  {
+    id: 3,
+    title: "Portfolio Website",
+    description:
+      "A sleek, modern portfolio website showcasing projects and skills with smooth animations and a responsive design.",
+    image: "/portfolio.jpg",
+    features: ["Project Showcase", "Animated Transitions", "Responsive Design"],
+    techStack: ["Next.js", "Framer Motion", "Tailwind CSS", "shadcn"],
+    sourceUrl: "https://github.com/linnkhant886/richard-portfolio",
+    liveUrl: "#",
+  },
+  {
+    id: 4,
+    title: "Job Finding App",
+    description:
+      "A full-stack job-finding application allowing users to create, read, update, and delete job postings while browsing available opportunities.",
+    image: "/jobstar.jpg",
+    features: [
+      "Job CRUD Operations",
+      "Job Search & Filtering",
+      "State Management with Redux",
+    ],
+    techStack: ["MongoDB", "Express.js", "React", "Node.js", "Redux"],
+    sourceUrl: "https://github.com/linnkhant886/Jobster",
+    liveUrl: "https://crudjobster.netlify.app/landing",
+  },
 ];
 
 export default function ProjectsPage() {
@@ -63,7 +106,7 @@ export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-black text-white p-8" ref={containerRef}>
       <BackgroundElement />
-      <div className="max-w-6xl mx-auto space-y-12">
+      <div className="max-w-6xl mx-auto space-y-12 ">
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -77,7 +120,7 @@ export default function ProjectsPage() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8   ">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -99,9 +142,12 @@ export default function ProjectsPage() {
                 {/* Project Image */}
                 <div className="relative aspect-video overflow-hidden">
                   <Image
-                    src={project.image }
+                    src={project.image}
                     alt={project.title}
-                    fill
+                    layout="responsive"
+                    width={600} // Base width for aspect ratio
+                    height={337} // Base height for aspect ratio (adjusted for ~16:9)
+                    className="object-cover w-full h-full"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </div>

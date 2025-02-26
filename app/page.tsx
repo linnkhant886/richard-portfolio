@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Download, FileText } from "lucide-react";
-import SocialLink from "./component/SocialLink";
-import BackgroundElement from "./component/BackgroundElement";
 import Link from "next/link";
+import BackgroundElement from "@/components/BackgroundElement";
+import SocialLink from "@/components/SocialLink";
 
 export default function PortfolioPage() {
   return (
@@ -70,7 +70,6 @@ export default function PortfolioPage() {
               <Button
                 size="lg"
                 variant="outline"
-                
                 className="group relative overflow-hidden border-white/20 hover:border-white/40"
                 onClick={() => window.open("/myResume.pdf", "_blank")}
               >
