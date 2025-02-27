@@ -20,12 +20,12 @@ export default function Education() {
           <div className="absolute inset-0 w-0.5  bg-white/20"></div>
 
           <Card className="bg-zinc-900/50 border-white/10 p-6  ">
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="w-24 h-24 rounded-full bg-white/10 flex items-center justify-center">
                 <Image src={"/logo.jpg"} alt="logo" width={100} height={100} />
               </div>
               <div className=" space-y-2">
-                <h3 className="text-xl font-semibold capitalize">
+                <h3 className=" md:text-xl font-semibold capitalize">
                   rangsit university international college
                 </h3>
                 <p className="text-gray-400 capitalize">
