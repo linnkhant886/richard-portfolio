@@ -71,7 +71,7 @@ export default function PortfolioPage() {
                 size="lg"
                 variant="outline"
                 className="group relative overflow-hidden border-white/20 hover:border-white/40"
-                onClick={() => window.open("/myResume.pdf", "_blank")}
+                onClick={() => window.open("/resume.pdf", "_blank")}
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 group-hover:opacity-100 opacity-0 transition-opacity" />
                 <FileText className="mr-2 h-5 w-5 group-hover:animate-bounce" />

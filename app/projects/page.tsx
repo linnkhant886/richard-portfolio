@@ -87,7 +87,7 @@ const projects: Project[] = [
     ],
     techStack: ["MongoDB", "Express.js", "React", "Node.js", "Redux"],
     sourceUrl: "https://github.com/linnkhant886/Jobster",
-    liveUrl: "https://crudjobster.netlify.app/landing",
+    liveUrl: "https://crudjobster.netlify.app",
   },
 ];
 
