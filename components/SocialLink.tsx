@@ -39,7 +39,7 @@ export default function SocialLink() {
         { icon: Github, href: "https://github.com/linnkhant886" },
         {
           icon: Linkedin,
-          href: "https://www.linkedin.com/in/yonatan-richard-a05701287/",
+          href: "https://www.linkedin.com/in/lin-oo-khant-447644377/",
         },
         { icon: Instagram, href: "https://www.instagram.com/yonatan_r1ch3d/" },
         { icon: Mail, href: "mailto:linookhant886@gmail.com" },

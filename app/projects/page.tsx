@@ -23,6 +23,30 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
+    title: "ScholarFlow AI (NEXUS)",
+    description:
+      "A full-stack academic opportunity platform for students and researchers to find, track, and apply for scholarships, grants, and internships using AI-powered matching and document analysis.",
+    image: "/Nexuss.jpg",
+    features: [
+      "AI Opportunity Matching & Profile Scoring",
+      "Application Pipeline (Kanban Board)",
+      "Document OCR & Quality Analysis",
+      "CV/Resume Template Editor",
+      "Interview Copilot",
+    ],
+    techStack: [
+      "Next.js",
+      "Supabase",
+      "OpenAI",
+      "pgvector",
+      "TanStack Query",
+      "Tailwind CSS",
+    ],
+    sourceUrl: "#",
+    liveUrl: "https://aipowerjobassistant.vercel.app/",
+  },
+  {
+    id: 2,
     title: "Restaurant POS system",
     description:
       "Built a full-stack POS system with Next.js, including a back-office dashboard for restaurant management and a customer-facing QR code ordering feature.",
@@ -43,7 +67,7 @@ const projects: Project[] = [
     liveUrl: "https://restaurant-pos-lac.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Home Rental System",
     description:
       "A full-stack home rental platform for listing properties, managing bookings, and processing payments securely.",
@@ -64,7 +88,7 @@ const projects: Project[] = [
     liveUrl: "#",
   },
   {
-    id: 3,
+    id: 4,
     title: "Portfolio Website",
     description:
       "A sleek, modern portfolio website showcasing projects and skills with smooth animations and a responsive design.",
@@ -75,7 +99,7 @@ const projects: Project[] = [
     liveUrl: "#",
   },
   {
-    id: 4,
+    id: 5,
     title: "Job Finding App",
     description:
       "A full-stack job-finding application allowing users to create, read, update, and delete job postings while browsing available opportunities.",

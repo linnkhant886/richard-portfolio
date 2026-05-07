@@ -23,12 +23,14 @@ export default function Sidebar({
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 0.9 }}
-        className="w-[25%] fixed  h-screen bg-transparent backdrop-blur-xl   p-6"
+        className="w-[25%] fixed h-screen bg-transparent backdrop-blur-xl p-6 pt-28 border-r border-white/5"
       >
-        <h2 className="text-2xl text-center font-bold mb-2">ABOUT ME</h2>
-        <p className="text-sm text-center text-gray-400 mb-8">
-          My Profile At A Glance
-        </p>
+        <div className="space-y-1 text-center mb-10">
+          <h2 className="text-sm uppercase tracking-[0.3em] text-blue-500 font-bold">About Me</h2>
+          <p className="text-xs text-gray-500 uppercase tracking-widest">
+            Profile Overview
+          </p>
+        </div>
 
         <div className="space-y-2 flex  flex-col ">
           {sideBarItems.map((item) => (
