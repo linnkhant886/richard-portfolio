@@ -2,17 +2,11 @@
 import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { 
-  Code2, 
-  Terminal, 
   Database as DbIcon, 
-  ShieldCheck, 
   BrainCircuit, 
-  Wrench, 
-  Sparkles,
   Layers,
   Server,
   Lock,
-  Cpu,
   Settings,
   Lightbulb
 } from "lucide-react";

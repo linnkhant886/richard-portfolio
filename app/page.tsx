@@ -1,8 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Download, FileText, Sparkles, Code2, Rocket } from "lucide-react";
+import { ArrowRight, Download, FileText, Code2 } from "lucide-react";
 import Link from "next/link";
 import BackgroundElement from "@/components/BackgroundElement";
 import SocialLink from "@/components/SocialLink";

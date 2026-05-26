@@ -23,7 +23,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "ScholarFlow AI (NEXUS)",
+    title: "Nexus",
     description:
       "A full-stack academic opportunity platform for students and researchers to find, track, and apply for scholarships, grants, and internships using AI-powered matching and document analysis.",
     image: "/Nexuss.jpg",
